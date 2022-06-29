@@ -25,7 +25,7 @@ export default {
     },
     isLoading: { control: { type: 'boolean' } },
     isDisabled: { control: { type: 'boolean' } },
-    isFullWidth: { control: { type: 'boolean' } },
+    width: { control: { type: 'string' } },
   },
 } as ComponentMeta<typeof Button>;
 
@@ -70,7 +70,7 @@ Size.args = {
 export const FullWidth = Template.bind({});
 FullWidth.args = {
   size: 'md',
-  isFullWidth: true,
+  width: "full",
 };
 
 export const Disabled = Template.bind({});

@@ -34,14 +34,6 @@ describe('The SplitScreen component', () => {
   });
 
   describe('on mobile', () => {
-    beforeAll(() => {
-      global.matchMedia = jest.fn().mockReturnValue({
-        matches: true,
-        addListener: jest.fn(),
-        removeListener: jest.fn(),
-      });
-    });
-
     it('does not render the left part if hideLeftOnMobile is true', () => {
       setup({ mobileIsOpen: true, hideLeftOnMobile: true });
 

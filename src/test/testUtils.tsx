@@ -19,3 +19,19 @@ export * from '@testing-library/react';
 
 // override render method
 export { render };
+
+// Mock matchMedia
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockReturnValue({
+    matches: true,
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
+  }),
+});
+
+// Mock scrollTo
+Object.defineProperty(window, 'scrollTo', {
+  writable: true,
+  value: jest.fn(),
+});

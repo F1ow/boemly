@@ -18,7 +18,7 @@ export default {
     placeholder: { control: { type: 'text' } },
     isDisabled: { control: { type: 'boolean' } },
     isInvalid: { control: { type: 'boolean' } },
-    isFullWidth: { control: { type: 'boolean' } },
+    width: { control: { type: 'string' } },
     onChange: { action: 'Select changed' },
     value: { control: { type: 'text' } },
   },
